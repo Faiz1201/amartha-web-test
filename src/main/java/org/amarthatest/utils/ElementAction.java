@@ -4,6 +4,7 @@ import org.amarthatest.BaseSetup;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.time.Duration;
 
@@ -30,10 +31,6 @@ public class ElementAction extends BaseSetup {
     public static void validateText(By element, String text) {
         waitUntilElement(element);
         String text_actual = driver.findElement(element).getText();
-        if (text_actual.equals(text)) {
-            System.out.println("Text Matched");
-        } else {
-            System.out.println("Text Mismatch! Expected: '" + text + "', but Found: '" + text_actual + "'");
-        }
+        Assert.assertEquals(text_actual, text);
     }
 }
