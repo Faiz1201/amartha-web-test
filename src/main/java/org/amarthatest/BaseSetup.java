@@ -11,8 +11,8 @@ public class BaseSetup {
     public static WebDriver driver;
     public static WebDriverWait wait;
 
-    public static void setup() {
-        WebDriverManager.chromedriver().driverVersion("134.0.6998.165").setup();
+    public static void setup(String chromeVersion) {
+        WebDriverManager.chromedriver().driverVersion(chromeVersion).setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));

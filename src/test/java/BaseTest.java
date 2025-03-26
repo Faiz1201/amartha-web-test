@@ -6,7 +6,7 @@ import static org.amarthatest.constant.DataConstant.BASE_URL;
 public class BaseTest extends BaseSetup {
     @BeforeMethod
     public void testSetup() {
-        setup();
+        setup("134.0.6998.165");
         driver.get(BASE_URL);
     }
 
