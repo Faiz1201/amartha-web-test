@@ -8,7 +8,6 @@ import org.openqa.selenium.By;
 public class MenuCase {
     private static final By btnBurger = By.id("react-burger-menu-btn");
 
-    @Step("Do Go To Menu")
     public static void goToListMenu(ListMenu listMenu) {
         ElementAction.click(btnBurger);
         switch (listMenu) {

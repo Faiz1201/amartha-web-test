@@ -1,5 +1,6 @@
 package org.amarthatest.utils;
 
+import io.qameta.allure.Allure;
 import org.amarthatest.BaseSetup;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -20,17 +21,23 @@ public class ElementAction extends BaseSetup {
 
     public static void click (By element) {
         waitUntilElement(element);
-        driver.findElement(element).click();
+        Allure.step("Click Button " + element, () -> {
+            driver.findElement(element).click();
+        });
     }
 
     public static void inputText(By element, String text) {
         waitUntilElement(element);
-        driver.findElement(element).sendKeys(text);
+        Allure.step("Input Text " + element + " : " + text, () -> {
+            driver.findElement(element).sendKeys(text);
+        });
     }
 
     public static void validateText(By element, String text) {
         waitUntilElement(element);
         String text_actual = driver.findElement(element).getText();
-        Assert.assertEquals(text_actual, text);
+        Allure.step("Validate Text " + '('+ text_actual +')' + " compare with " + '(' + text + ')', () -> {
+            Assert.assertEquals(text_actual, text);
+        });
     }
 }
