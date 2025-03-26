@@ -2,9 +2,8 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
-import listener.AllureTestListener;
+import org.amarthatest.listener.AllureTestListener;
 import org.amarthatest.cases.LoginCase;
-import org.openqa.selenium.By;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 

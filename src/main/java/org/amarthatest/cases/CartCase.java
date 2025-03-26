@@ -15,13 +15,11 @@ public class CartCase {
         return By.xpath("//div[@data-test='inventory-item-name']");
     }
 
-    @Step("Add Item To Cart")
     public static void addToCartItem(String itemName) {
         ElementAction.click(btnItemName(itemName));
         ElementAction.click(btnAddToCart);
     }
 
-    @Step("Validate Item is Correct")
     public static void verifyCheckoutItem(String text) {
         ElementAction.click(btnCartCheckout);
         ElementAction.validateText(btnInventoryItemName(), text);

@@ -10,7 +10,6 @@ public class LoginCase {
     private static final By etPassword = By.id("password");
     private static final By btnLogin = By.id("login-button");
 
-    @Step("Do Case Login")
     public static void doLogin(String username, String password) {
         ElementAction.inputText(etUsername, username);
         ElementAction.inputText(etPassword, password);

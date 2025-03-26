@@ -2,7 +2,7 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
-import listener.AllureTestListener;
+import org.amarthatest.listener.AllureTestListener;
 import org.amarthatest.cases.MenuCase;
 import org.amarthatest.model.ListMenu;
 import org.testng.annotations.Listeners;
