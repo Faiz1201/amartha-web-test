@@ -24,7 +24,7 @@ public class AllureTestListener implements ITestListener {
             Allure.addAttachment("Screenshot", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
             saveScreenshot(driver);
         } else {
-            System.out.println("WebDriver tidak ditemukan di TestContext.");
+            System.out.println("WebDriver Can't Be Found.");
         }
     }
 
@@ -37,7 +37,7 @@ public class AllureTestListener implements ITestListener {
             Allure.addAttachment("Screenshot", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
             saveScreenshot(driver);
         } else {
-            System.out.println("WebDriver tidak ditemukan di TestContext.");
+            System.out.println("WebDriver Can't Be Found.");
         }
     }
 
@@ -50,7 +50,6 @@ public class AllureTestListener implements ITestListener {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         return screenshot;
     }
 }
